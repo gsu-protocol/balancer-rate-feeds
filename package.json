@@ -1,0 +1,33 @@
+{
+  "name": "balancer-rate-feeds",
+  "version": "1.0.0",
+  "description": "GSU Price rate providers for Balancer V2 Metastable Pools",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/gsu-protocol/balancer-rate-feeds#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsu-protocol/balancer-rate-feeds.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gsu-protocol/balancer-rate-feeds/issues"
+  },
+  "scripts": {
+    "build": "yarn compile",
+    "compile": "hardhat compile && rm -rf artifacts/build-info",
+    "compile:watch": "nodemon --ext sol --exec yarn compile",
+    "test": "npx hardhat test",
+    "test:gas": "REPORT_GAS=true npx hardhat test"
+  },
+  "engines": {
+    "node": ">=16.16.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomicfoundation/hardhat-verify": "^1.0.0",
+    "hardhat": "^2.14.0",
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3"
+  }
+}
